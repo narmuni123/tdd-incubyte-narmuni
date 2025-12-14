@@ -24,10 +24,18 @@ void main() {
   // });
 
   // fourth test case
-  test('returns sum of multiple comma-separated numbers', () {
+  // test('returns sum of multiple comma-separated numbers', () {
+  //   final calculator = StringCalculator();
+  //   expect(calculator.add('1,2,3,4'), 10);
+  //   expect(calculator.add('5,5,5,5,5'), 25);
+  // });
+
+
+  // fifth test case
+  test('supports new line as delimiter', () {
     final calculator = StringCalculator();
-    expect(calculator.add('1,2,3,4'), 10);
-    expect(calculator.add('5,5,5,5,5'), 25);
+    expect(calculator.add('1\n2,3'), 6);
+    expect(calculator.add('4\n5\n6'), 15);
   });
 
 
