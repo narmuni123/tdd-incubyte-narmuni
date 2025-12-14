@@ -1,6 +1,5 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
+/// TDD Incubyte Narmuni
+
 library;
 
 export 'src/string_calculator.dart';
