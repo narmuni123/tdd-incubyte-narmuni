@@ -15,8 +15,20 @@ class StringCalculator {
   // }
 
   /// fifth test case
+  // int add(String numbers) {
+  //   final parts = numbers.split(RegExp('[,\n]'));
+  //   return parts.map(int.parse).reduce((a, b) => a + b);
+  // }
+
+  /// sixth test case
   int add(String numbers) {
-    final parts = numbers.split(RegExp('[,\n]'));
+    String delimiter = ',';
+    if (numbers.startsWith('//')) {
+      final delimiterEndIndex = numbers.indexOf('\n');
+      delimiter = numbers.substring(2, delimiterEndIndex);
+      numbers = numbers.substring(delimiterEndIndex + 1);
+    }
+    final parts = numbers.split(RegExp('[$delimiter,\n]'));
     return parts.map(int.parse).reduce((a, b) => a + b);
   }
 

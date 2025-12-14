@@ -32,10 +32,17 @@ void main() {
 
 
   // fifth test case
-  test('supports new line as delimiter', () {
+  // test('supports new line as delimiter', () {
+  //   final calculator = StringCalculator();
+  //   expect(calculator.add('1\n2,3'), 6);
+  //   expect(calculator.add('4\n5\n6'), 15);
+  // });
+
+  // sixth test case
+  test('supports custom delimiter', () {
     final calculator = StringCalculator();
-    expect(calculator.add('1\n2,3'), 6);
-    expect(calculator.add('4\n5\n6'), 15);
+    expect(calculator.add('//;\n1;2;3'), 6);
+    expect(calculator.add('//|\n4|5|6'), 15);
   });
 
 
