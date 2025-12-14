@@ -3,6 +3,4 @@
 /// More dartdocs go here.
 library;
 
-export 'src/tdd_incubyte_narmuni_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/string_calculator.dart';
