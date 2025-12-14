@@ -39,11 +39,18 @@ void main() {
   // });
 
   // sixth test case
-  test('supports custom delimiter', () {
+  // test('supports custom delimiter', () {
+  //   final calculator = StringCalculator();
+  //   expect(calculator.add('//;\n1;2;3'), 6);
+  //   expect(calculator.add('//|\n4|5|6'), 15);
+  // });
+
+  // seventh test case
+  test('throws exception for negative numbers', () {
     final calculator = StringCalculator();
-    expect(calculator.add('//;\n1;2;3'), 6);
-    expect(calculator.add('//|\n4|5|6'), 15);
+    expect(
+            () => calculator.add('1,-2,3,-4'),
+        throwsA(predicate((e) => e.toString().contains('negative numbers not allowed -2,-4')))
+    );
   });
-
-
 }
