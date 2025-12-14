@@ -1,39 +1,34 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# String Calculator – TDD Kata (Incubyte)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+This repository contains my implementation of the **String Calculator TDD Kata**
+as part of the Incubyte technical assessment.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+The primary goal of this exercise was **not just to make the code work**, but to
+demonstrate a **disciplined Test-Driven Development (TDD) approach**, focusing on
+small iterations, clean code, and meaningful commits.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
-## Features
+## 🧠 Approach & Philosophy
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Followed **strict TDD**:  
+  **Red → Green → Refactor** for every requirement.
+- Each feature was introduced via a **failing test first**.
+- Changes were kept **small and incremental**, resulting in a clear commit history.
+- Refactoring was done only after tests passed, keeping behavior unchanged.
+- Code readability and intent were prioritized over cleverness.
 
-## Getting started
+The full evolution of the solution can be understood by reading the commit history
+or the `CHANGELOG.md`.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+---
 
-## Usage
+## ✅ Requirements Covered
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+The `add` method supports:
 
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+- Empty string → returns `0`
+- Single number → returns the number itself
+- Any amount of numbers separated by commas
+- Newline (`\n`) as a valid delimiter
+- Custom delimiter syntax:
